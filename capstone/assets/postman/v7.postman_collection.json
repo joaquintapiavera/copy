@@ -1,0 +1,1534 @@
+{
+  "info": {
+    "_postman_id": "7f429071-e6ed-4f17-a44d-9127efecd733",
+    "name": "v7",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48342815",
+    "_collection_link": "https://go.postman.co/collection/48342815-7f429071-e6ed-4f17-a44d-9127efecd733?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "CRUD",
+      "item": [
+        {
+          "name": "Users CRUD",
+          "item": [
+            {
+              "name": "Gets a user by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/api/users/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "698951042c9d1fe05b66430c"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creates a User",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"username\":\"joaquito999\",\r\n    \"email\":\"joaquin123@gmal.com999\",\r\n    \"password\":\"password123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/users",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Completely updates a user by ID",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"username\":\"joaquito123\",\r\n    \"email\":\"joaquin123@gmail.com\",\r\n    \"password\":\"password123\",\r\n    \"isReady\": \"true\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/users/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6986cd1fca433344d24a3b06"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Partially updates a user by ID",
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"isReady\": \"true\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/users/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6987766da9f34c9bff8913c1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Deletes a user by ID",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/api/users/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6986cd1fca433344d24a3b06"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Games CRUD",
+          "item": [
+            {
+              "name": "Gets a game by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/api/games/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "games",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "698951402c9d1fe05b664316"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creates a game",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODk0NDdkZmQ2MThkZTNiOTk0YzQwMyIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyNDYiLCJpYXQiOjE3NzA2MDQ1NTIsImV4cCI6MTc3MTIwOTM1Mn0.gsMmL7jzAzRd5qPQq3nRmRbMV6nvBB9JOC4c_FkwhQQ",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Joaquin\",\r\n    \"rules\": \"My game, my rules\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/games",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "games"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Completely updates a game by ID",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Partida de prueba\",\r\n  \"rules\": \"Cada jugador roba una carta y quien tenga mayor valor gana la ronda.\",\r\n  \"status\": \"IN_PROGRESS\",\r\n  \"maxPlayers\": 4,\r\n  \"creatorId\": \"641c7f9a2f1b2c001f3a1234\",\r\n  \"currentPlayersId\": [\r\n    \"641c7f9a2f1b2c001f3a1234\",\r\n    \"641c7f9a2f1b2c001f3a5678\"\r\n  ],\r\n  \"turnPlayerIndex\": 0,\r\n  \"topCardId\": \"641c7f9a2f1b2c001f3a9abc\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/games/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "games",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "698951402c9d1fe05b664316"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Partially updates a game by ID",
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"topCardId\": \"69894730e4d3d8a426b03320\",\r\n    \"currentPlayersId\": [],\r\n    \"creatorId\": \"69894b0e2c9d1fe05b66424d\",\r\n    \"status\": \"WAITING\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/games/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "games",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "69894d3c2c9d1fe05b664281"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Deletes a game by ID",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODAxNjIzNTBmYzZhYWE2ZWJmZmE4MCIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyIiwiaWF0IjoxNzcwMDAzMDE1LCJleHAiOjE3NzA2MDc4MTV9.UcxnZDkvPMuO_kFtG4IV5sSONOUBD70qXzHExPR5o3c",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Joaquin\",\r\n    \"rules\": \"My game, my rules\"\r\n}"
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/games/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "games",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "698951402c9d1fe05b664316"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Cards CRUD",
+          "item": [
+            {
+              "name": "Gets a game by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/api/cards/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cards",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "698951822c9d1fe05b664320"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creates a Card",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODAxNjIzNTBmYzZhYWE2ZWJmZmE4MCIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyIiwiaWF0IjoxNzcwMDAzMDE1LCJleHAiOjE3NzA2MDc4MTV9.UcxnZDkvPMuO_kFtG4IV5sSONOUBD70qXzHExPR5o3c",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"color\": \"RED\",\r\n    \"value\": \"4\",\r\n    \"gameId\": \"69894665e4d3d8a426b0331e\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/cards",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cards"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Completely updates a card by ID",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"color\": \"RED\",\r\n    \"value\": \"5\",\r\n    \"gameId\": \"69801c7c42fe1e76d5021471\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/cards/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cards",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "698951822c9d1fe05b664320"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Partially updates a card by ID",
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"color\":\"GREEN\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/cards/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cards",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "698951822c9d1fe05b664320"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Deletes a card by ID",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/cards/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cards",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "698951822c9d1fe05b664320"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Scores CRUD",
+          "item": [
+            {
+              "name": "Gets a score by ID",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/scores/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "scores",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "698951a72c9d1fe05b664329"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creates a Score",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": \"69894b0e2c9d1fe05b66424d\",\r\n    \"gameId\": \"69894d3c2c9d1fe05b664281\",\r\n    \"score\":\"200\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/scores",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "scores"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Completely updates a score by ID",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODAxNjIzNTBmYzZhYWE2ZWJmZmE4MCIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyIiwiaWF0IjoxNzcwMDAzMDE1LCJleHAiOjE3NzA2MDc4MTV9.UcxnZDkvPMuO_kFtG4IV5sSONOUBD70qXzHExPR5o3c",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": \"6980162350fc6aaa6ebffa80\",\r\n    \"gameId\":\"698018fa42fe1e76d5021453\",\r\n    \"score\":\"250\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/scores/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "scores",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "698951a72c9d1fe05b664329"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Partially updates a score by ID",
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"score\":\"380\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/scores/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "scores",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6986c55c5117158d75385c7a"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Deletes a scores by ID",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/scores/:id",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "scores",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6986c55c5117158d75385c7a"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OPERATIONS",
+      "item": [
+        {
+          "name": "Registers a user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"example_user4565\",\r\n    \"email\": \"example@example.com5456\",\r\n    \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/auth/register",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logs in using User credentials",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"example_user1\",\r\n    \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/auth/login",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logs out using a Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDQ5MTY4MiwiZXhwIjoxNzcxMDk2NDgyfQ.eqEthPka3PYQ7RfTGj8M6K9l57Rnb9ROF-GRJnG_MQk\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/auth/logout",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Gets a user by token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUwNzI2OCwiZXhwIjoxNzcxMTEyMDY4fQ.r4c1WqkcpEZMqYXdHqFUmpqYXwWEKprzXCToTd9acuI\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/users/profile",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Creates a game with Header Token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Joaquin\",\r\n    \"rules\": \"My game, my rules\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Joins a game",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"6987efb0218dd2057df5f5b6\",\r\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxNDYzMywiZXhwIjoxNzcxMTE5NDMzfQ.RGl-kCG-XgUldHLWpd63EfVNc4HyTeq7JgMk7c6WT_I\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/join",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "join"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Starts a game",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"6987efb0218dd2057df5f5b6\",\r\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxNDYzMywiZXhwIjoxNzcxMTE5NDMzfQ.RGl-kCG-XgUldHLWpd63EfVNc4HyTeq7JgMk7c6WT_I\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/start",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "start"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Leaves a game",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"6987efb0218dd2057df5f5b6\",\r\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxNDYzMywiZXhwIjoxNzcxMTE5NDMzfQ.RGl-kCG-XgUldHLWpd63EfVNc4HyTeq7JgMk7c6WT_I\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/leave",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "leave"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ends a game",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"6987efb0218dd2057df5f5b6\",\r\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxNDYzMywiZXhwIjoxNzcxMTE5NDMzfQ.RGl-kCG-XgUldHLWpd63EfVNc4HyTeq7JgMk7c6WT_I\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/end",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "end"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Gets a game status",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"11f5c0f1-0c81-4f41-b460-e8d36fb77559\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/status",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Gets all player's names",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"11f5c0f1-0c81-4f41-b460-e8d36fb77559\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/players",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "players"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Gets the current player",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"11f5c0f1-0c81-4f41-b460-e8d36fb77559\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/current-player",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "current-player"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retrieves the top-card of a Game",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODAxNjIzNTBmYzZhYWE2ZWJmZmE4MCIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyIiwiaWF0IjoxNzcwMDAzMDE1LCJleHAiOjE3NzA2MDc4MTV9.UcxnZDkvPMuO_kFtG4IV5sSONOUBD70qXzHExPR5o3c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"6987efb0218dd2057df5f5b6\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/top-card",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "top-card"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retrieves scores from all players",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODAxNjIzNTBmYzZhYWE2ZWJmZmE4MCIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyIiwiaWF0IjoxNzcwMDAzMDE1LCJleHAiOjE3NzA2MDc4MTV9.UcxnZDkvPMuO_kFtG4IV5sSONOUBD70qXzHExPR5o3c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"11f5c0f1-0c81-4f41-b460-e8d36fb77559\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/scores",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "scores"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deal Cards",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"players\": [\"Joaco1000\"],\r\n  \"cardsPerPlayer\": 7\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/deal-cards",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "deal-cards"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Deal Cards",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"players\": [\"joaquin004\", \"joaquin005\", \"joaquin006\"],\r\n  \"cardsPerPlayer\": 7\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/api/games/deal-cards",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "api",
+                    "games",
+                    "deal-cards"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "442"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1ba-fKcgD0HKX4Qr18cQ4mplwE+T3CY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 22 Feb 2026 14:52:46 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Cards dealt successfully\",\n    \"players\": {\n        \"joaquin004\": [\n            \"RED NUMBER 9\",\n            \"BLUE NUMBER 5\",\n            \"YELLOW NUMBER 7\",\n            \"YELLOW NUMBER 0\",\n            \"BLUE NUMBER 8\",\n            \"YELLOW NUMBER 1\",\n            \"YELLOW NUMBER 5\"\n        ],\n        \"joaquin005\": [\n            \"YELLOW NUMBER 1\",\n            \"YELLOW NUMBER 9\",\n            \"GREEN NUMBER 2\",\n            \"BLUE NUMBER 3\",\n            \"BLUE REVERSE -1\",\n            \"RED NUMBER 7\",\n            \"RED NUMBER 0\"\n        ],\n        \"joaquin006\": [\n            \"RED NUMBER 5\",\n            \"RED NUMBER 8\",\n            \"RED NUMBER 9\",\n            \"RED NUMBER 0\",\n            \"RED NUMBER 3\",\n            \"GREEN NUMBER 2\",\n            \"GREEN REVERSE -1\"\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Play Card",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n    \"player\": \"Player1\",\r\n    \"cardPlayed\": \"Green 7\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/play-card",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "play-card"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Draw Card",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"player\": \"joaquin006\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/draw-card",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "draw-card"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Say UNO",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"player\": \"joaquin006\",\r\n    \"action\":\"Say UNO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/say-uno",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "say-uno"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Challenge Player",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"challenger\": \"joaquin004\",\r\n    \"challengedPlayer\": \"joaquin006\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/challenge-player",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "challenge-player"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Handle Draw Card",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n    \"player\": \"Joaco999\",\r\n    \"action\": \"draw-card\"\r\n} ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/handle-draw-card",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "handle-draw-card"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Handle Play Card",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODc3NjZkYTlmMzRjOWJmZjg5MTNjMSIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyMSIsImlhdCI6MTc3MDUxMDA0NywiZXhwIjoxNzcxMTE0ODQ3fQ._OCW-t3KBjVaM1WJRTC80cKbnOp2hVU1PIjK9d6ovtI",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n    \"player\": \"Joaco1000\",\r\n    \"action\": \"play-card\",\r\n    \"card\": \"BLUE REVERSE\"\r\n\r\n} ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/handle-play-card",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "handle-play-card"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Game History",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODAxNjIzNTBmYzZhYWE2ZWJmZmE4MCIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyIiwiaWF0IjoxNzcwMDAzMDE1LCJleHAiOjE3NzA2MDc4MTV9.UcxnZDkvPMuO_kFtG4IV5sSONOUBD70qXzHExPR5o3c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"5990dae9-35a4-48b3-91eb-8465fd13917e\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/game-history",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "game-history"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Player Hand",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"player\": \"Joaco999\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/player-hand",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "player-hand"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Game State",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODAxNjIzNTBmYzZhYWE2ZWJmZmE4MCIsInVzZXJuYW1lIjoiZXhhbXBsZV91c2VyIiwiaWF0IjoxNzcwMDAzMDE1LCJleHAiOjE3NzA2MDc4MTV9.UcxnZDkvPMuO_kFtG4IV5sSONOUBD70qXzHExPR5o3c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"612f205e-c294-470f-a3e6-693fb0bcfe36\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/game-state",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "game-state"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Next Player",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"game_id\": \"11f5c0f1-0c81-4f41-b460-e8d36fb77559\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/games/next-turn",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "games",
+                "next-turn"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
